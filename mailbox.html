@@ -63,3 +63,77 @@
         .mail .subject {
             font-size: 20px;
             font-weight: bold;
+            color: #007bff;
+        }
+
+        .mail .sender {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .mail .date {
+            font-size: 14px;
+            color: #999;
+        }
+
+        .mail .message {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        .mailbox .back-btn {
+            display: inline-block;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .mailbox .back-btn:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>我的临时邮箱</h1>
+</header>
+
+<div class="container">
+    <div class="mailbox">
+        <h2>收到的邮件</h2>
+
+        <!-- 模拟邮件内容 -->
+        <div class="mail">
+            <div class="subject">欢迎使用我们的临时邮箱服务！</div>
+            <div class="sender">来自：info@service.com</div>
+            <div class="date">2025-01-21 10:30</div>
+            <div class="message">您好！感谢您使用我们的临时邮箱服务。如果您有任何问题，请随时联系我们。</div>
+        </div>
+
+        <div class="mail">
+            <div class="subject">您的邮件已成功发送</div>
+            <div class="sender">来自：no-reply@system.com</div>
+            <div class="date">2025-01-21 09:00</div>
+            <div class="message">您的邮件已成功提交，我们会尽快处理您的请求。如果您有任何问题，请联系我们的客服。</div>
+        </div>
+
+        <div class="mail">
+            <div class="subject">临时邮箱使用小贴士</div>
+            <div class="sender">来自：support@alipaycat.com</div>
+            <div class="date">2025-01-20 16:00</div>
+            <div class="message">使用我们的临时邮箱非常简单，只需复制您的临时邮箱地址即可接收邮件。为保护隐私，我们建议您定期清理收件箱。</div>
+        </div>
+
+        <!-- 返回首页按钮 -->
+        <a href="index.html" class="back-btn">返回首页</a>
+    </div>
+</div>
+
+</body>
+</html>
