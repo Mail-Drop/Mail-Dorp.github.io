@@ -156,6 +156,9 @@
         
         <!-- 显示生成的临时邮箱 -->
         <p class="email-address" id="emailAddress">等待生成邮箱...</p>
+
+        <!-- 进入邮箱按钮，初始时隐藏 -->
+        <button id="enterMailboxButton" style="display: none;" onclick="window.location.href='mailbox.html'">进入邮箱</button>
     </div>
 </div>
 
@@ -179,6 +182,9 @@
 
         // 显示生成的邮箱地址
         document.getElementById('emailAddress').textContent = tempEmail;
+
+        // 显示进入邮箱按钮
+        document.getElementById('enterMailboxButton').style.display = 'inline-block';
     }
 
     // 生成随机的邮箱前缀（例如：abc123）
