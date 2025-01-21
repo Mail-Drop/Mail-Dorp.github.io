@@ -1,133 +1,135 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <!-- 设置字符编码为UTF-8，确保中文字符显示正常 -->
     <meta charset="UTF-8">
-    
-    <!-- 设置响应式视图，确保页面在手机上也能适应不同屏幕尺寸 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- 页面描述，用于搜索引擎优化（SEO） -->
     <meta name="description" content="临时邮箱接收服务，您可以将邮件发送到指定邮箱，我们会转发给您的真实邮箱。">
-    
-    <!-- 设置页面标题，会显示在浏览器的标签页上 -->
     <title>临时邮箱接收服务</title>
 
-    <!-- 设置页面图标，通常显示在浏览器标签页上 -->
+    <!-- 设置页面图标 -->
     <link rel="icon" href="https://via.placeholder.com/32x32.png?text=Mail" type="image/png">
 
     <style>
-        /* 样式部分：重置浏览器默认样式 */
+        /* Reset一些默认的浏览器样式 */
         * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* 让所有元素的宽高计算都包含边框和内边距 */
+            box-sizing: border-box;
         }
 
-        /* 设置整个页面的背景色和字体 */
         body {
-            font-family: 'Arial', sans-serif; /* 使用现代无衬线字体 */
-            background-color: #f8f9fa; /* 页面背景色为浅灰色 */
-            color: #333; /* 默认文本颜色为深灰色 */
-            line-height: 1.6; /* 设置行高，让文本间隔更舒适 */
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
         }
 
-        /* 页面顶部，标题和说明的部分 */
+        /* 页面头部 */
         header {
-            background-color: #007bff; /* 设置蓝色背景色 */
-            color: #fff; /* 设置白色文字 */
-            text-align: center; /* 内容居中对齐 */
-            padding: 20px 0; /* 上下内边距为20px */
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
 
-        /* 页面标题的样式 */
         header h1 {
-            font-size: 36px; /* 设置大号字体 */
-            margin-bottom: 10px; /* 底部留白 */
+            font-size: 36px;
+            margin-bottom: 10px;
         }
 
-        /* 页面副标题的样式 */
         header p {
-            font-size: 18px; /* 设置字体大小 */
+            font-size: 18px;
         }
 
-        /* 页面主体内容部分 */
+        /* 页面主体 */
         .container {
-            max-width: 960px; /* 限制内容区域的最大宽度为960px */
-            margin: 0 auto; /* 将内容居中对齐 */
-            padding: 20px; /* 内容周围留出20px的内边距 */
+            max-width: 960px;
+            margin: 0 auto;
+            padding: 20px;
         }
 
-        /* 临时邮箱展示区域的样式 */
+        /* 临时邮箱展示区域 */
         .email-box {
-            background-color: #fff; /* 白色背景 */
-            border-radius: 8px; /* 设置圆角效果 */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加轻微阴影效果 */
-            padding: 40px; /* 内边距为40px */
-            margin-top: 40px; /* 距离上方内容40px */
-            text-align: center; /* 内容居中 */
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 40px;
+            margin-top: 40px;
+            text-align: center;
         }
 
-        /* 临时邮箱地址标题 */
         .email-box h2 {
-            font-size: 28px; /* 设置大号字体 */
-            margin-bottom: 20px; /* 底部留白 */
-            color: #007bff; /* 标题文字为蓝色 */
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #007bff;
         }
 
-        /* 临时邮箱地址的样式 */
         .email-box p {
-            font-size: 20px; /* 设置字体大小 */
-            color: #555; /* 设置灰色文字 */
+            font-size: 20px;
+            color: #555;
         }
 
-        /* 临时邮箱地址的样式，字体加粗并突出显示 */
         .email-box .email-address {
-            font-size: 22px; /* 设置字体大小 */
-            font-weight: bold; /* 字体加粗 */
-            color: #007bff; /* 字体颜色为蓝色 */
-            margin-top: 10px; /* 上边距为10px */
-            margin-bottom: 20px; /* 下边距为20px */
+            font-size: 22px;
+            font-weight: bold;
+            color: #007bff;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
 
-        /* 其他信息的样式，颜色较浅 */
         .email-box .info {
-            font-size: 16px; /* 字体大小为16px */
-            color: #777; /* 设置浅灰色字体 */
+            font-size: 16px;
+            color: #777;
         }
 
-        /* 页脚样式，背景色为蓝色 */
+        .email-box input {
+            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 50%;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .email-box button {
+            font-size: 18px;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .email-box button:hover {
+            background-color: #0056b3;
+        }
+
         .footer {
-            text-align: center; /* 内容居中对齐 */
-            margin-top: 50px; /* 顶部留空50px */
-            padding: 20px; /* 内边距20px */
-            background-color: #007bff; /* 背景色为蓝色 */
-            color: #fff; /* 文本颜色为白色 */
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
         }
 
-        /* 页脚中的文本样式 */
         .footer p {
-            font-size: 14px; /* 字体大小为14px */
+            font-size: 14px;
         }
 
-        /* 响应式设计：在小屏幕设备（如手机）上做适配 */
         @media (max-width: 768px) {
-            /* 当屏幕宽度小于768px时，调整页面布局 */
             header h1 {
-                font-size: 28px; /* 标题字体减小 */
+                font-size: 28px;
             }
 
-            /* 调整邮箱展示卡片的标题字体 */
             .email-box h2 {
                 font-size: 24px;
             }
 
-            /* 调整正文部分的字体 */
             .email-box p {
                 font-size: 18px;
             }
 
-            /* 调整页脚文字的字体 */
             .footer p {
                 font-size: 12px;
             }
@@ -136,28 +138,59 @@
 </head>
 <body>
 
-<!-- 页面头部，显示主标题和副标题 -->
 <header>
     <h1>临时邮箱接收服务</h1>
     <p>将邮件发送到我们的临时邮箱，我们会转发给您的真实邮箱。</p>
 </header>
 
-<!-- 页面主体内容，包含临时邮箱展示区域 -->
 <div class="container">
     <div class="email-box">
         <h2>您的临时邮箱地址</h2>
-        <!-- 显示临时邮箱地址 -->
-        <p class="email-address">yourname@temporaryemail.com</p>
-        <!-- 显示如何使用该邮箱的说明 -->
-        <p class="info">您可以将邮件发送到上述邮箱，邮件会转发到您的真实邮箱。</p>
-        <p class="info">如果您不再需要该邮箱，请随时停止使用。</p>
+        <p class="info">请设置自定义邮箱前缀，然后点击生成新的邮箱。</p>
+        
+        <!-- 用户输入自定义前缀的输入框 -->
+        <input type="text" id="customPrefix" placeholder="请输入邮箱前缀（例如：yourname）" />
+        
+        <!-- 生成邮箱地址的按钮 -->
+        <button onclick="generateEmail()">生成临时邮箱</button>
+        
+        <!-- 显示生成的临时邮箱 -->
+        <p class="email-address" id="emailAddress">等待生成邮箱...</p>
     </div>
 </div>
 
-<!-- 页脚部分，包含版权信息 -->
 <div class="footer">
     <p>© 2025 临时邮箱服务 | 提供便捷的临时邮箱接收功能</p>
 </div>
+
+<script>
+    // 设置固定后缀
+    const emailDomain = "@alipaycat.com";
+
+    // 生成随机的临时邮箱地址
+    function generateEmail() {
+        const customPrefix = document.getElementById('customPrefix').value.trim();
+        
+        // 如果用户没有输入自定义前缀，则生成一个随机前缀
+        const prefix = customPrefix || generateRandomPrefix();
+        
+        // 合成完整的临时邮箱地址
+        const tempEmail = prefix + emailDomain;
+
+        // 显示生成的邮箱地址
+        document.getElementById('emailAddress').textContent = tempEmail;
+    }
+
+    // 生成随机的邮箱前缀（例如：abc123）
+    function generateRandomPrefix() {
+        const chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+        let result = '';
+        for (let i = 0; i < 8; i++) {
+            result += chars.charAt(Math.floor(Math.random() * chars.length));
+        }
+        return result;
+    }
+</script>
 
 </body>
 </html>
